@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+     <!-- ربط ملف التصميم -->
+    <link rel="stylesheet" href="index.css">
+    <title>كوزماتيك المكلا - سلة التسوق</title>
+ 
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="logo">✨ كوزماتيك <span>المكلا</span> ✨</div>
+        <div class="slogan">💖 عناية المرأة والرجل والطفل - جميع المنتجات أصلية 100% 💖</div>
+        <div class="location">📍 اليمن - حضرموت - المكلا</div>
+    </div>
+
+    <div id="mainCategories">
+        <div class="categories">
+            <div class="cat-card" onclick="showCategory('woman')">
+                <div class="cat-icon">💄👩</div>
+                <div class="cat-title">المرأة</div>
+                <div class="cat-desc">مكياج، كريمات، عطور، عناية بالشعر</div>
+                <button class="btn-cat">اكتشفي المنتجات →</button>
+            </div>
+            <div class="cat-card" onclick="showCategory('man')">
+                <div class="cat-icon">🧔‍♂️💈</div>
+                <div class="cat-title">الرجل</div>
+                <div class="cat-desc">عناية باللحية، بخاخات، مزيل عرق</div>
+                <button class="btn-cat">اكتشف المنتجات →</button>
+            </div>
+            <div class="cat-card" onclick="showCategory('child')">
+                <div class="cat-icon">🧸👶</div>
+                <div class="cat-title">الطفل</div>
+                <div class="cat-desc">شامبو أطفال، كريم حفاض، لوشن معطر</div>
+                <button class="btn-cat">تسوقي للصغار →</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="womanProducts" class="products-section">
+        <div class="section-header">
+            <h2>💄 منتجات <span>المرأة</span></h2>
+            <button class="back-btn" onclick="backToMain()">↩️ العودة للرئيسية</button>
+        </div>
+        <div class="products-grid" id="womanGrid"></div>
+    </div>
+    <div id="manProducts" class="products-section">
+        <div class="section-header">
+            <h2>🧔 منتجات <span>الرجل</span></h2>
+            <button class="back-btn" onclick="backToMain()">↩️ العودة للرئيسية</button>
+        </div>
+        <div class="products-grid" id="manGrid"></div>
+    </div>
+    <div id="childProducts" class="products-section">
+        <div class="section-header">
+            <h2>👶 منتجات <span>الطفل</span></h2>
+            <button class="back-btn" onclick="backToMain()">↩️ العودة للرئيسية</button>
+        </div>
+        <div class="products-grid" id="childGrid"></div>
+    </div>
+
+    <div class="contact-info">
+        <h3>📞 للطلب والاستفسار</h3>
+        <div class="contact-details">
+            <div>📱 +967 739342521</div>
+            <div>📞 05 314826</div>
+            <div>💬 شكاوى ومقترحات: 777994820</div>
+        </div>
+        <p style="margin-top: 12px;">🌟 جميع منتجاتنا أصلية 100% - التوصيل إلى المكلا وجميع أنحاء اليمن 🌟</p>
+    </div>
+
+    <!-- توقيع المبرمجة -->
+    <div class="developer-credit">
+        <p>🔧 <span class="dev-name">تطوير وبرمجة الموقع: المهندسة إيمان سعيد باعكابه</span></p>
+        <p>📞 للاستفسارات التقنية: <span class="dev-phone">734711173</span></p>
+    </div>
+
+    <div class="footer">كوزماتيك المكلا - الجودة والثقة | عناية متكاملة للمرأة والرجل والطفل</div>
+</div>
+
+<!-- أيقونة السلة -->
+<div class="cart-icon" id="cartIcon" onclick="toggleCart()">
+    🛒
+    <span class="cart-count" id="cartCount">0</span>
+</div>
+
+<!-- السلة الجانبية -->
+<div class="overlay" id="overlay" onclick="toggleCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+        <h3>🛒 سلة المشتريات</h3>
+        <button class="close-cart" onclick="toggleCart()">✖</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+        <p style="text-align:center; color:#999;">✨ السلة فارغة ✨</p>
+    </div>
+    <div class="cart-total" id="cartTotal">💰 الإجمالي: 0 ريال</div>
+    <button class="checkout-wa" onclick="checkoutWhatsApp()">📲 إتمام الشراء عبر واتساب</button>
+    <button class="clear-cart" onclick="clearCart()">🗑️ تفريغ السلة</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
